@@ -1,10 +1,10 @@
 class NfsMount < Formula
   desc "NFS mount manager for macOS with YAML configuration and automation support"
   homepage "https://github.com/peteha/mac-nfs-mount"
-  url "https://github.com/peteha/mac-nfs-mount/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "" # Will be filled when you create a release
+  # For local development, install from local path
+  url "file:///Users/peteha/GitHub/mac-nfs-mount"
+  version "1.0.0"
   license "MIT"
-  head "https://github.com/peteha/mac-nfs-mount.git", branch: "main"
 
   depends_on "yq"
 
@@ -18,9 +18,6 @@ class NfsMount < Formula
     doc.install "KEYBOARD_MAESTRO_SETUP.md"
     doc.install "CONFIG_REFERENCE.md"
     doc.install "example.yaml"
-    
-    # Create config directory on first install
-    (var/"nfs-mount").mkpath
   end
 
   def post_install
@@ -93,4 +90,3 @@ class NfsMount < Formula
     assert_match "NFS Mount Manager for macOS", shell_output("#{bin}/nfs-mount --help")
   end
 end
-
