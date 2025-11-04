@@ -1,9 +1,9 @@
 class NfsMount < Formula
   desc "NFS mount manager for macOS with YAML configuration and automation support"
   homepage "https://github.com/peteha/mac-nfs-mount"
-  url "https://github.com/peteha/mac-nfs-mount/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "701ffdec9a15cc9096a0b013855c5c59cea83a6161d5857674567afcf791bf0b"
-  version "1.0.0"
+  url "https://github.com/peteha/mac-nfs-mount/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "57a199d20caa1d8b3c2a315f4df966710a6caf27973170f8f456b4799892dd07"
+  version "1.0.1"
   license "MIT"
 
   depends_on "yq"
